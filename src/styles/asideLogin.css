@@ -1,0 +1,14 @@
+.aside {
+  background-image: url(../assets/image-aside.svg);
+  background-size: cover;
+  box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  padding: 35px;
+  width: 60vw;
+}
+
+.aside > img {
+  max-width: 306px;
+}

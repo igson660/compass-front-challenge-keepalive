@@ -1,0 +1,12 @@
+@import url(./styles/reset.css);
+@import url(./styles/asideLogin.css);
+@import url(./styles/form.css);
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+}
+
+main {
+  width: 40vw;
+}
