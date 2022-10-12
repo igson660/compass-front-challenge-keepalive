@@ -1,0 +1,41 @@
+@import url(./styles/colors.css);
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.form > p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.form > input {
+  background-color: transparent;
+  border: 1px solid var(--light-font-color);
+  height: 60px;
+  border-radius: 50px;
+  padding-left: 30px;
+  color: var(--light-font-color);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.form > button {
+  background-image: linear-gradient(
+    90deg,
+    var(--backgroun-gradent-button-1) 0%,
+    var(--backgroun-gradent-button-2) 100%
+  );
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 23px;
+  height: 67px;
+  color: var(--light-font-color);
+  cursor: pointer;
+  margin-top: 30px;
+}
