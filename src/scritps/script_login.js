@@ -1,4 +1,4 @@
-import * as utils from "./scritps/utils.js";
+import * as utils from "./utils.js";
 const HALF_SECOND = 500;
 
 export const $selector = document.querySelector.bind(document);

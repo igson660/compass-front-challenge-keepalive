@@ -1,9 +1,9 @@
-import { $selector } from "../script.js";
+import { $selector } from "./script_login.js";
 
 export const varifyContentInput = () => {
-  const email = $selector(".input-user");
+  const user = $selector(".input-user");
   const password = $selector(".input-password");
-  email.value
+  user.value
     ? $selector(".user").classList.add("selected")
     : $selector(".user").classList.remove("selected");
   password.value
@@ -12,14 +12,46 @@ export const varifyContentInput = () => {
 };
 
 export const toLogin = () => {
-  const email = $selector(".input-user").value;
-  const password = $selector(".input-password").value;
+  let user = $selector(".input-user").value;
+  let password = $selector(".input-password").value;
   const spanError = $selector(".message-error");
+  const data = { user, password };
 
-  if (email === "admin" && password === "admin") {
+  if (user === "admin" && password === "admin") {
     const path = window.location.href.replace("index.html", "pages/home.html");
+    localStorage.setItem("user", JSON.stringify(data));
+    user = "";
+    password = "";
     window.location.href = path;
     return;
   }
   spanError.style.display = "block";
+};
+
+export const getDate = () => {
+  const fullMonths = [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ];
+  const data = new Date();
+  return `${data.getDay()} de ${
+    fullMonths[data.getMonth()]
+  } de ${data.getFullYear()}`;
+};
+
+export const getHour = () => {
+  const data = new Date();
+  return `${data.getHours()}:${
+    data.getMinutes() < 10 ? `0${data.getMinutes()}` : data.getMinutes()
+  }`;
 };
