@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+picture {
+  padding-top: 10px;
+}
+
+.container_date_hours {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-hours {
+  font-weight: 700;
+  font-size: 8rem;
+}
+
+.full-date {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.container_climate_location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}

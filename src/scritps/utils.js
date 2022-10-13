@@ -1,4 +1,4 @@
-import { $selector } from "./script_login.js";
+export const $selector = document.querySelector.bind(document);
 
 export const varifyContentInput = () => {
   const user = $selector(".input-user");
@@ -54,4 +54,21 @@ export const getHour = () => {
   return `${data.getHours()}:${
     data.getMinutes() < 10 ? `0${data.getMinutes()}` : data.getMinutes()
   }`;
+};
+
+export const insertContent = (
+  childEl,
+  contentEl,
+  parentEl,
+  rPrecious,
+  addClass
+) => {
+  const childTag = document.createElement(`${childEl}`);
+  const content = document.createTextNode(`${contentEl}`);
+  const parentTag = $selector(`${parentEl}`);
+
+  rPrecious ? (parentTag.innerHTML = "") : false;
+  addClass ? childTag.classList.add(addClass) : false;
+  childTag.appendChild(content);
+  parentTag.appendChild(childTag);
 };
