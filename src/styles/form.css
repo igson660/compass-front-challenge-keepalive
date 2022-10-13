@@ -38,21 +38,33 @@
   height: 67px;
   color: var(--light-font-color);
   cursor: pointer;
-  margin-top: 30px;
+  margin-top: 70px;
 }
 
 .icon {
   position: absolute;
   font-size: 1.8rem;
   right: -10%;
-  bottom: 69%;
-  transition: .5s ease;
+  bottom: 73%;
+  transition: 0.5s ease;
 }
 
 .password {
-  bottom: 42%;
+  bottom: 49%;
 }
 
 .selected {
   right: 3%;
+}
+
+.message-error {
+  color: var(--light-font-color-error);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  display: none;
+  transition: 0.5s ease;
+  position: absolute;
+  bottom: 25%;
 }

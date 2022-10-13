@@ -1,14 +1,10 @@
 import * as utils from "./scritps/utils.js";
-const ONE_SECOND = 1000;
+const HALF_SECOND = 500;
 
 export const $selector = document.querySelector.bind(document);
 
-$selector(".input-email").addEventListener("click", () =>
-  utils.emojiTransition(".email", "selected")
-);
+//trasition icon
+setInterval(() => utils.varifyContentInput(), HALF_SECOND);
 
-$selector(".input-password").addEventListener("click", () =>
-  utils.emojiTransition(".password", "selected")
-);
-
-setInterval(() => utils.varifyContentInput(), ONE_SECOND);
+// verify data and redirect
+$selector(".button-form").addEventListener("click", () => utils.toLogin());
