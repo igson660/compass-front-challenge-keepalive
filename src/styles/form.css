@@ -1,6 +1,7 @@
 @import url(./styles/colors.css);
 
 .form {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -38,4 +39,20 @@
   color: var(--light-font-color);
   cursor: pointer;
   margin-top: 30px;
+}
+
+.icon {
+  position: absolute;
+  font-size: 1.8rem;
+  right: -10%;
+  bottom: 69%;
+  transition: .5s ease;
+}
+
+.password {
+  bottom: 42%;
+}
+
+.selected {
+  right: 3%;
 }
