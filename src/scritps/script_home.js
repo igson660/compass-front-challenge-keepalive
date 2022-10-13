@@ -1,6 +1,7 @@
 import * as utils from "./utils.js";
+import * as service from "../service/index.js";
 
-//insert hours
+//insert data
 utils.insertContent(
   "time",
   utils.getDate(),
@@ -9,6 +10,7 @@ utils.insertContent(
   "full-date"
 );
 
+//insert hours
 setInterval(() =>
   utils.insertContent(
     "time",
@@ -17,4 +19,12 @@ setInterval(() =>
     true,
     "full-hours"
   )
+);
+
+//get and insert geolcation
+navigator.geolocation.getCurrentPosition(
+  async ({ coords: { latitude, longitude } }) => {
+    const location = await service.getLocation(latitude, longitude);
+    utils.insertContent("span", location, ".location", false, "span-location");
+  }
 );
