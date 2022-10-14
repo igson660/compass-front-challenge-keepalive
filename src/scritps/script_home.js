@@ -24,7 +24,16 @@ setInterval(() =>
 //get and insert geolcation
 navigator.geolocation.getCurrentPosition(
   async ({ coords: { latitude, longitude } }) => {
-    const location = await service.getLocation(latitude, longitude);
-    utils.insertContent("span", location, ".location", false, "span-location");
+    const { city, state } = await service.getLocation(latitude, longitude);
+    const { temp_c, icon } = await service.getWeather(city);
+    utils.insertContent(
+      "span",
+      `${city}-${state}`,
+      ".location",
+      false,
+      "span-location"
+    );
+    utils.$selector(".icon").setAttribute("src", `https:${icon}`);
+    utils.insertContent("span", `${temp_c}°`, ".temp", false, "span-temp");
   }
 );
