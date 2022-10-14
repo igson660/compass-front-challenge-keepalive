@@ -1,6 +1,8 @@
 import * as utils from "./utils.js";
 import * as service from "../service/index.js";
 
+const ONE_SECOND = 1000;
+
 //insert data
 utils.insertContent(
   "time",
@@ -11,14 +13,16 @@ utils.insertContent(
 );
 
 //insert hours
-setInterval(() =>
-  utils.insertContent(
-    "time",
-    utils.getHour(),
-    ".container_hours",
-    true,
-    "full-hours"
-  )
+setInterval(
+  () =>
+    utils.insertContent(
+      "time",
+      utils.getHour(),
+      ".container_hours",
+      true,
+      "full-hours"
+    ),
+  ONE_SECOND
 );
 
 //get and insert geolcation
@@ -37,3 +41,11 @@ navigator.geolocation.getCurrentPosition(
     utils.insertContent("span", `${temp_c}°`, ".temp", false, "span-temp");
   }
 );
+
+//timer
+setInterval(() => {
+  const timer = utils.$selector(".timer").innerText;
+  if (Number(timer) > 0) {
+    utils.insertContent("time", Number(timer) - 1, ".div-timer", true, "timer");
+  }
+}, ONE_SECOND);

@@ -44,7 +44,7 @@ export const getDate = () => {
     "Dezembro",
   ];
   const data = new Date();
-  return `${data.getDay()} de ${
+  return `${data.getDate()} de ${
     fullMonths[data.getMonth()]
   } de ${data.getFullYear()}`;
 };
@@ -72,3 +72,4 @@ export const insertContent = (
   childTag.appendChild(content);
   parentTag.appendChild(childTag);
 };
+
