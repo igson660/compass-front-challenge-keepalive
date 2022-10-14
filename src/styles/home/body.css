@@ -1,0 +1,30 @@
+@import url(../colors.css);
+
+.main-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(../../assets/background-bol.svg);
+  background-repeat: no-repeat;
+  background-size: 30% ;
+  padding: 0 60px;
+  height: 70vh;
+}
+
+.en {
+  color: var(--light-font-color-home);
+  font-size: 4rem;
+  text-align: right;
+  font-weight: 700;
+}
+
+.pt-br {
+  text-align: right;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 3vh;
+}
+
+.en-min {
+  font-size: 2.2rem;
+}
