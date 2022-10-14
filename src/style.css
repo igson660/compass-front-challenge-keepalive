@@ -1,3 +1,13 @@
 @import url(./styles/reset.css);
 @import url(./styles/login/style_login.css);
 @import url(./styles/home/style_home.css);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
