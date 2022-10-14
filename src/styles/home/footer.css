@@ -64,10 +64,15 @@ hr {
 
 .button-redirect {
   color: var(--light-font-color-home);
+  height: 100%;
 }
 
 .button-logout {
   font-weight: 700;
   color: var(--light-font-color);
   background-color: var(--dark-background);
+}
+
+.container-footer__right > a {
+  height: 100%;
 }
