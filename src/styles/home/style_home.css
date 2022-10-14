@@ -1,7 +1,9 @@
 @import url(../colors.css);
 @import url(./header.css);
 @import url(./body.css);
+@import url(./footer.css);
 
 .body-home {
   color: var(--dark-background);
+  background-color: var(--light-font-color);
 }
