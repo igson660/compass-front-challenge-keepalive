@@ -49,3 +49,6 @@ setInterval(() => {
     utils.insertContent("time", Number(timer) - 1, ".div-timer", true, "timer");
   }
 }, ONE_SECOND);
+
+// verify data and redirect
+utils.$selector(".button-logout").addEventListener("click", () => utils.toLogin());

@@ -12,20 +12,21 @@ export const varifyContentInput = () => {
 };
 
 export const toLogin = () => {
-  let user = $selector(".input-user").value;
-  let password = $selector(".input-password").value;
-  const spanError = $selector(".message-error");
-  const data = { user, password };
+  const CPath = window.location.href;
+  if (CPath.includes("index.html")) {
+    let user = $selector(".input-user").value;
+    let password = $selector(".input-password").value;
 
-  if (user === "admin" && password === "admin") {
-    const path = window.location.href.replace("index.html", "pages/home.html");
-    localStorage.setItem("user", JSON.stringify(data));
-    user = "";
-    password = "";
-    window.location.href = path;
-    return;
+    if (user === "admin" && password === "admin") {
+      localStorage.setItem("user", JSON.stringify({ user, password }));
+      window.location.href = CPath.replace("index.html", "pages/home.html");
+      return;
+    }
+    return ($selector(".message-error").style.display = "block");
+  } else {
+    localStorage.removeItem("user");
+    window.location.href = CPath.replace("pages/home.html", "index.html");
   }
-  spanError.style.display = "block";
 };
 
 export const getDate = () => {
@@ -72,4 +73,3 @@ export const insertContent = (
   childTag.appendChild(content);
   parentTag.appendChild(childTag);
 };
-
