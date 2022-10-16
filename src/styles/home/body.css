@@ -7,13 +7,13 @@
   background-image: url(../../assets/background-bol.svg);
   background-repeat: no-repeat;
   background-size: 30% ;
-  padding: 0 60px;
+  padding: 0 100px;
   height: 70vh;
 }
 
 .en {
   color: var(--light-font-color-home);
-  font-size: 4rem;
+  font-size: 3.4rem;
   text-align: right;
   font-weight: 700;
 }
@@ -26,5 +26,5 @@
 }
 
 .en-min {
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
