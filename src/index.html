@@ -26,18 +26,23 @@
       </h1>
       <form class="form">
         <p>Login</p>
-        <input class="input-user" type="email" placeholder="Usuário" required />
-        <i class="fa-brands fa-facebook icon-login user"></i>
+        <input class="input-user" type="text" placeholder="Usuário" required />
+        <img src="./assets/icon-user.svg" alt="icon" class="icon-login user" />
         <input
           class="input-password"
           type="password"
           placeholder="Senha"
           required
         />
-        <i class="fa-brands fa-facebook icon-login password"></i>
-        <span class="message-error"
-          >Ops, usuário ou senha inválidos. Tente novamente!</span
-        >
+        <img
+          src="./assets/icon-password.svg"
+          alt="icon"
+          class="icon-login password"
+        />
+
+        <span class="message-error">
+          Ops, usuário ou senha inválidos. Tente novamente!
+        </span>
         <button type="button" class="button-form">Conituar</button>
       </form>
     </main>

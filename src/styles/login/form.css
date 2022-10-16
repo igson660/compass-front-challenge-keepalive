@@ -43,9 +43,10 @@
 
 .icon-login {
   position: absolute;
-  font-size: 1.8rem;
+  width: 20px;
+  height: 20px;
   right: -10%;
-  bottom: 73%;
+  bottom: 75%;
   transition: 0.5s ease;
 }
 
