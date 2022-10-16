@@ -13,20 +13,15 @@ export const varifyContentInput = () => {
 
 export const toLogin = () => {
   const CPath = window.location.href;
-  if (CPath.includes("index.html")) {
-    let user = $selector(".input-user").value;
-    let password = $selector(".input-password").value;
+  let user = $selector(".input-user").value;
+  let password = $selector(".input-password").value;
 
-    if (user === "admin" && password === "admin") {
-      localStorage.setItem("user", JSON.stringify({ user, password }));
-      window.location.href = CPath.replace("index.html", "pages/home.html");
-      return;
-    }
-    return ($selector(".message-error").style.display = "block");
-  } else {
-    localStorage.removeItem("user");
-    window.location.href = CPath.replace("pages/home.html", "index.html");
+  if (user === "admin" && password === "admin") {
+    localStorage.setItem("user", JSON.stringify({ user, password }));
+    window.location.href = CPath.replace("index.html", "pages/home.html");
+    return;
   }
+  return ($selector(".message-error").style.display = "block");
 };
 
 export const getDate = () => {
@@ -72,4 +67,15 @@ export const insertContent = (
   addClass ? childTag.classList.add(addClass) : false;
   childTag.appendChild(content);
   parentTag.appendChild(childTag);
+};
+
+export const departureConfirmation = () => {
+  const confirmation = confirm("Deseja continuar logado?");
+  const CPath = window.location.href;
+  if (confirmation) {
+    window.location.reload();
+    return;
+  }
+  localStorage.removeItem("user");
+  window.location.href = CPath.replace("pages/home.html", "index.html");
 };

@@ -3,17 +3,16 @@
 .main-home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-image: url(../../assets/background-bol.svg);
   background-repeat: no-repeat;
-  background-size: 30% ;
-  padding: 0 100px;
+  background-size: 30%;
+  padding: 3% 5% 0 0;
   height: 70vh;
 }
 
 .en {
   color: var(--light-font-color-home);
-  font-size: 3.4rem;
+  font-size: 4rem;
   text-align: right;
   font-weight: 700;
 }
