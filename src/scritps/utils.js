@@ -69,13 +69,12 @@ export const insertContent = (
   parentTag.appendChild(childTag);
 };
 
-export const departureConfirmation = () => {
+export const departureConfirmation = (name) => {
   const confirmation = confirm("Deseja continuar logado?");
   const CPath = window.location.href;
-  if (confirmation) {
-    window.location.reload();
-    return;
-  }
+
+  if (name && confirmation) return none;
+  if (confirmation) return window.location.reload();
   localStorage.removeItem("user");
   window.location.href = CPath.replace("pages/home.html", "index.html");
 };

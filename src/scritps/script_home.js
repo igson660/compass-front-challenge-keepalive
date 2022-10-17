@@ -39,8 +39,10 @@ const interval = setInterval(() => {
     return insertContent("time", timer - 1, ".div-timer", true, "timer");
   }
   clearInterval(interval);
-  departureConfirmation();
+  departureConfirmation(null);
 }, ONE_SECOND);
 
 // verify data and redirect
-$selector(".button-logout").addEventListener("click", () => departureConfirmation());
+$selector(".button-logout").addEventListener("click", ({ target: { name } }) =>
+  departureConfirmation(name)
+);
