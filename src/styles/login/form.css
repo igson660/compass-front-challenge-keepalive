@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 40%;
 }
 
 .form > p {
@@ -62,6 +62,7 @@
 
 .message-error {
   color: var(--light-font-color-error);
+  padding: 0 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -70,4 +71,8 @@
   transition: 0.5s ease;
   position: absolute;
   bottom: 25%;
+}
+
+.form > .input-error {
+  border: 1px solid var(--light-font-color-error);
 }

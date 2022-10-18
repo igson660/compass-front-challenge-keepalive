@@ -21,7 +21,9 @@ export const toLogin = () => {
     window.location.href = CPath.replace("index.html", "pages/home.html");
     return;
   }
-  return ($selector(".message-error").style.display = "block");
+  $selector(".message-error").style.display = "block";
+  $selector(".input-user").classList.add("input-error");
+  $selector(".input-password").classList.add("input-error");
 };
 
 export const getDate = () => {

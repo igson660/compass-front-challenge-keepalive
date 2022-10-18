@@ -28,6 +28,7 @@ hr {
 }
 
 .span2-footer__home {
+  margin-left: 50px;
   width: 100px;
   font-size: 0.8rem;
 }
